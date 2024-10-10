@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Contenedor con ancho limitado para centrar y ajustar el contenido */
+.content-wrapper {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenido */
+    padding: 20px; /* Agregar relleno */
+}
+
+/* Estilos de progreso */
+.progress-logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.logo-container img {
+    max-width: 250px; /* Hacer el logo más grande, hasta 250px */
+}
+
+/* Progreso de los pasos */
+.progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Para que los círculos se ajusten en pantallas pequeñas */
+}
+
+.step-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    margin: 5px; /* Espacio entre los círculos */
+}
+
+.completed {
+    background-color: #2c4e86; /* Color azul solicitado */
+    color: white;
+}
+
+.step-line {
+    width: 80px;
+    height: 5px;
+    background-color: #ddd;
+}
+
+.step-circle.completed + .step-line {
+    background-color: #2c4e86; /* Color azul para la línea */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 576px) {
+    .step-circle {
+        width: 40px; /* Reducir el tamaño en dispositivos móviles */
+        height: 40px; /* Mantener el aspecto circular */
+        font-size: 16px; /* Reducir el tamaño del texto */
+    }
+    .step-line {
+        width: 30px; /* Acortar aún más las líneas en dispositivos pequeños */
+    }
+
+    .logo-container img {
+        max-width: 150px; /* Redimensionar el logo para pantallas pequeñas */
+    }
+}
+
+/* Quitar estilos de enlace */
+.progress-container a {
+    text-decoration: none; /* Quitar subrayado */
+    color: inherit; /* Mantener el color actual */
+}
+
+.progress-container a:hover {
+    color: inherit; /* Evitar cambio de color en hover */
+}
+
+/* Estilos de los títulos */
+h1, h2, h3 {
+    color: #2c4e86;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Estilos de los botones */
+.btn-atras, .btn-siguiente {
+    background-color: #fab31c; /* Color de fondo del botón */
+    color: #2c4e86; /* Color del texto */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.btn-atras:hover, .btn-siguiente:hover {
+    background-color: white;
+    color: #fab31c; /* Cambio de color en hover */
+    border: 2px solid #fab31c; /* Agrega un borde cuando se pasa el ratón */
+}
+
+/* Sección de subida de archivos */
+.upload-section {
+    border: 2px dashed #4CAF50;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.upload-section:hover {
+    background-color: #f5f5f5;
+    border-color: #3e8e41;
+}
+
+.upload-section .form-label {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.upload-section input[type="file"] {
+    display: block;
+    margin: 10px auto;
+}
+
+.upload-section i {
+    font-size: 40px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.status-icon {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .status-v {
+            color: green;
+        }
+        .status-x {
+            color: red;
+        }
+.table {
+            border: 2px solid #2c4e86; /* Borde de la tabla */
+            margin: 0 auto; /* Asegurar que la tabla esté centrada */
+        }
+        
+        .table th, .table td {
+            border: 2px solid #2c4e86; /* Bordes alrededor de cada celda */
+            text-align: center; /* Centrar el texto en todas las celdas */
+            vertical-align: middle; /* Centrar verticalmente */
+        }
+
+        .table th {
+            background-color: #f5f5f5; /* Fondo claro para los encabezados */
+            color: #2c4e86; /* Texto en color azul */
+        }
+
+        /* Contenedor para centrar la tabla */
+        .table-container {
+            display: flex;
+            justify-content: center;
+        }
+/* Botón de enviar y matricularse */
+        .btn-matricularse {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+
+        .btn-matricularse:hover {
+            background-color: #45a049;
+        }
